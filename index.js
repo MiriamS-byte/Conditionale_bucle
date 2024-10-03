@@ -181,4 +181,4 @@ for(i = 1; i <= firstN ; i++){
     }
 
     sum += i;
-}   console.log("Suma primelor n nr pare este: ", sum);
+}   console.log("Suma primelor ",firstN, " numere pare este: ", sum);
