@@ -89,3 +89,96 @@ switch(weekDay){
         console.log("Ziua nu a fost identificata");
     break;
 }
+
+//loops
+
+//while
+
+let cartItems = [
+    {
+    name : "Iphone 5",
+    price : 1700,
+    curency : "$",
+    amount : 1,
+    },
+    {
+        name : "Protector sleev",
+        price : 100,
+        curency : "$",
+        amount : 3,
+    },
+    {
+        name : "Apple sticker",
+        price : 21.99,
+        curency : "$",
+        amount : 4,
+    }
+]
+
+let totalPrice = 0;
+let productIndex = 0;
+while(productIndex < cartItems.length){
+    let product = cartItems[productIndex];
+    totalPrice = totalPrice + product.price * product.amount;
+    // productIndex += 1;
+    productIndex ++ ;
+} console.log("Your cart total is: ", totalPrice, cartItems[0].curency);
+
+//do - while
+
+let n = 5;
+let currentNumber = 0;
+ do {
+    currentNumber++;
+    console.log(currentNumber);
+ } while(currentNumber < n);
+
+
+ //for
+
+ let totalPrice2 = 0;
+ for(i = 0; i < cartItems.length; i++){
+    let product = cartItems[i];
+    totalPrice2 = totalPrice2 + product.price * product.amount;
+ }  console.log("Your cart computed with 'for' total is: ", totalPrice2, cartItems[0].curency);
+
+ //for - of
+ let totalPrice3 = 0;
+ for( let product of cartItems){
+    totalPrice3 += product.amount * product.price;
+ }  console.log("Your cart computed with 'for of' total is: ", totalPrice3, cartItems[0].curency);
+
+
+ //for in
+ let iphone =     {
+    name : "Iphone 5",
+    price : 1700,
+    curency : "$",
+    amount : 1,
+    };
+
+for(let key in iphone) {
+    console.log("key: ",key);
+}
+
+//use of "break" - gasirea indexului intr-un array
+const numbers = [, 7, 8, 12, 91];
+let numberToCheck = 8;
+for(j = 0; j < numbers.length; j++){
+    console.log("i: ", j);
+    if(numberToCheck === numbers[j]){
+        console.log("Number ", numberToCheck, "is found at ", j, "!");
+        break;
+    }
+}
+
+//use of continue - calcularea sumei primelor n nr pare
+let firstN = 10;
+let sum = 0;
+for(i = 1; i <= firstN ; i++){
+    if(i % 2 !== 0 ){
+        continue;
+    }
+
+    sum += i;
+}   console.log("Suma primelor n nr pare este: ", sum);
